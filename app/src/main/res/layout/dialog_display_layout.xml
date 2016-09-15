@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="vertical"
+                >
+
+               <TextView
+                   android:id="@+id/dialogDisplay_Text"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="15dp"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:text="@string/dialogDisplay_Text"
+                    />
+
+               <CheckBox
+                    android:id="@+id/checkbox_dialogDisplay1"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/checkbox_dialogDisplay1_Text"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_dialogDisplay2"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/checkbox_dialogDisplay2_Text"/>
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_dialogDisplay3"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/checkbox_dialogDisplay3_Text"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+</LinearLayout>

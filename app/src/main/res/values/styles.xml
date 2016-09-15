@@ -1,8 +1,27 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--<style name="AppThemeLight" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/app_black</item>
+        <item name="android:textColorSecondary">@color/app_grey_dark</item>
+        <item name="android:textColorTertiary">@color/app_grey_dark</item>
+        <item name="android:background">@color/app_grey_light_light</item>
+    </style>
+    <style name="AppThemeDark" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/app_white</item>
+        <item name="android:textColorSecondary">@color/app_grey_light</item>
+        <item name="android:textColorTertiary">@color/app_grey_light</item>
+        <item name="android:background">@color/app_grey_dark_dark</item>
+
+    </style>
+    <style name="AppThemeDarkHighContrast" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/app_grey_light</item>
+        <item name="android:textColorSecondary">@color/app_white</item>
+        <item name="android:textColorTertiary">@color/app_white</item>
+        <item name="android:background">@color/app_black</item>
+
     </style>
 
 </resources>

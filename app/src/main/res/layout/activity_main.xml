@@ -5,14 +5,98 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/background">
+    >
+
 
     <LinearLayout
-        android:id="@+id/layout_vertical"
+        android:id="@+id/LayoutSimple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+
         >
+
+        <TextView
+            android:id="@+id/LayoutSimpleLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/LayoutSimpleLine1"
+            android:textSize="@dimen/text_medium"
+            />
+
+        <TextView
+            android:id="@+id/LayoutSimpleLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/LayoutSimpleLine2"
+            android:textSize="@dimen/text_small"
+
+            />
+
+        <LinearLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/LayoutSimpleLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/LayoutSimpleLevel"
+                android:textSize="@dimen/text_huge"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/level_label_dBA"
+                android:textSize="@dimen/text_small"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/LayoutSimpleButtonRunning"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/ButtonRunning"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_small"
+            />
+
+        <it.piemonte.arpa.openoise.PlotSLM
+            android:id="@+id/PlotSLM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+    android:id="@+id/LayoutAdvance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
 
         <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    INFO TIME PART   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
         <LinearLayout
@@ -21,25 +105,16 @@
             android:orientation="horizontal"
             >
 
-            <Button
-                android:id="@+id/ButtonRunning"
+
+            <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:gravity="center"
-                android:text="@string/ButtonRunning"
-                android:textAllCaps="false"
-                android:textSize="@dimen/text_small"
-                />
-
-            <LinearLayout
-                android:layout_weight="2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:orientation="vertical"
                 android:gravity="left"
                 android:layout_gravity="center_vertical"
+
                 >
 
                 <TextView
@@ -48,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_small"
-                    android:textColor="@color/text"
+
                     />
 
                 <TextView
@@ -57,20 +132,32 @@
                     android:layout_height="wrap_content"
                     android:text="@string/DurationTimeRunning"
                     android:textSize="@dimen/text_small"
-                    android:textColor="@color/text"
+
                     />
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/ButtonRunning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/ButtonRunning"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_small"
+                />
 
         </LinearLayout>
 
 
         <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    LMIN, LEQ, LMAX PART   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
         <LinearLayout
+            android:id="@+id/LayoutAllLevel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/background_border"
             >
 
             <LinearLayout
@@ -78,18 +165,17 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="1dp"
+                android:padding="1dp"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center"
-                android:background="@color/background"
+                android:background="@drawable/border"
                 >
 
                 <TextView
                     android:text="@string/LMin_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/text"
                     />
 
                 <TextView
@@ -98,36 +184,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/LMin"
                     android:textSize="@dimen/text_medium"
-                    android:textColor="@color/text"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LayoutLMax"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_marginLeft="0dp"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:layout_gravity="center"
-                android:background="@color/background">
-
-                <TextView
-                    android:text="@string/LMax_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/text"
                     />
-
-                <TextView
-                    android:id="@+id/LMax"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/LMax"
-                    android:textSize="@dimen/text_medium"
-                    android:textColor="@color/text"/>
 
             </LinearLayout>
 
@@ -136,19 +193,18 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_marginLeft="0dp"
+                android:padding="1dp"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center"
-                android:background="@color/background">
+                android:background="@drawable/border"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/LAeqTimeDisplay_label"
-                    android:text="@string/LAeqTimeDisplay_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/text"
+                    android:text="@string/LAeqTimeDisplay_label"
                     />
 
                 <TextView
@@ -157,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/LAeqTimeDisplay"
                     android:textSize="@dimen/text_medium"
-                    android:textColor="@color/text"/>
+                    />
 
             </LinearLayout>
 
@@ -166,18 +222,17 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="1dp"
-                android:layout_marginLeft="0dp"
+                android:padding="1dp"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center"
-                android:background="@color/background">
+                android:background="@drawable/border"
+                >
 
                 <TextView
                     android:text="@string/LAeqRunning_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/text"
                     />
 
                 <TextView
@@ -186,86 +241,168 @@
                     android:layout_height="wrap_content"
                     android:text="@string/LAeqRunning"
                     android:textSize="@dimen/text_medium"
-                    android:textColor="@color/text"
                     />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutLMax"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                >
+
+                <TextView
+                    android:text="@string/LMax_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/LMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/LMax"
+                    android:textSize="@dimen/text_medium"
+                    />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
         <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    LEVEL PART   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
         <LinearLayout
+            android:id="@+id/LayoutLevel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
             >
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical"
-                >
-
-                <TextView
-                    android:id="@+id/level_label"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    android:text="@string/level_label"
-                    android:textSize="@dimen/text_large"
-                    android:textColor="@color/text"/>
+                    >
+
+                    <TextView
+                        android:id="@+id/level_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="@string/level_label"
+                        android:textSize="@dimen/text_large"
+                        />
+
+                    <TextView
+                        android:id="@+id/time_display_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_small"
+
+                        />
+
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/level"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/level"
+                    android:textSize="@dimen/text_huge"
+                    />
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:text="@string/level_label_dBA"
                     android:textSize="@dimen/text_small"
-                    android:textColor="@color/text"/>
-            </LinearLayout>
+                    />
+
+        </LinearLayout>
+
+
+        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    LEVEL NO PLOT   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
+        <LinearLayout
+            android:id="@+id/LayoutLevelNoPlot"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            >
 
             <TextView
-                android:id="@+id/level"
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:id="@+id/LevelNoPlotLabel"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="@string/level"
-                android:textSize="@dimen/text_huge"
-                android:textColor="@color/text"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:textSize="@dimen/text_large"
+                />
 
+            <TextView
+                android:id="@+id/LevelNoPlot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="110sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/level_label_dBA"
+                android:textSize="@dimen/text_small"
+                />
         </LinearLayout>
 
 
         <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    LOG PART   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
         <LinearLayout
+            android:id="@+id/LayoutLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:orientation="horizontal"
             >
-
-            <Button
-                android:id="@+id/ButtonLog"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textSize="@dimen/text_small"
-                android:textAllCaps="false"
-                />
 
             <LinearLayout
                 android:layout_weight="2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:orientation="vertical"
                 android:gravity="left"
                 android:layout_gravity="center">
@@ -274,55 +411,85 @@
                     android:id="@+id/StartingTimeLog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/StartingTimeLog"
+                    android:text="@string/StartingTimeLogText"
                     android:textSize="@dimen/text_small"
-                    android:textColor="@color/text"
                     />
 
                 <TextView
                     android:id="@+id/DurationTimeLog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/DurationTimeLog"
+                    android:text="@string/DurationTimeLogText"
                     android:textSize="@dimen/text_small"
-                    android:textColor="@color/text"/>
+                    />
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/ButtonLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/ButtonLogTextStart"
+                android:textSize="@dimen/text_small"
+                android:textAllCaps="false"
+                />
         </LinearLayout>
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    PLOT PART   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
     <LinearLayout
+        android:id="@+id/LayoutPlot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_margin="10dp"
         android:gravity="center"
         android:layout_gravity="center">
 
-        <it.piemonte.arpa.openoise.PlotFFT
-            android:id="@+id/PlotFFT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            />
-        <it.piemonte.arpa.openoise.PlotSLM
-            android:id="@+id/PlotSLM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
         <it.piemonte.arpa.openoise.PlotSLMHistory
             android:id="@+id/PlotSLMHistory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
+
         <it.piemonte.arpa.openoise.PlotThirdOctave
             android:id="@+id/PlotThirdOctave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             />
+
+        <!--<openoisetSonogram-->
+        <!--android:id="@+id/PlotSonogram"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--/>-->
+
+        <it.piemonte.arpa.openoise.PlotFFT
+            android:id="@+id/PlotFFT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/plot_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:text="@string/plot_label_SLMHistory"
+            android:textStyle="italic"
+            android:textSize="@dimen/text_small"
+            />
+    </LinearLayout>
+
+
+
     </LinearLayout>
 </LinearLayout>
 

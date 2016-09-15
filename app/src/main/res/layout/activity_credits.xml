@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/background"
     android:gravity="center"
     >
 
@@ -42,10 +41,11 @@
                     />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/ic_launcher"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/logo_openoise"
                     />
 
                 <TextView
@@ -59,20 +59,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="25dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/CreditsDevelopers"
                     />
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_width="150dp"
+                    android:layout_height="69dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginBottom="0dp"
-                    android:src="@mipmap/ic_arpa"
-                    android:scaleType="fitXY"
+                    android:src="@drawable/logo_arpa"
                     />
                 <TextView
-                    android:id="@+id/created"
+                    android:id="@+id/CreditsDevelopersText1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
@@ -81,14 +80,14 @@
                     android:gravity="center"
                     />
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_width="150dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="0dp"
-                    android:src="@mipmap/ic_boella"
-                    android:scaleType="fitXY"
+                    android:src="@drawable/logo_boella"
                     />
                 <TextView
+                    android:id="@+id/CreditsDevelopersText2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
@@ -99,7 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="25dp"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/CreditsContacts"
                     android:autoLink="web"
@@ -107,6 +106,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/CreditsContactsText"
                     />

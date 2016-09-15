@@ -1,7 +1,10 @@
 package it.piemonte.arpa.openoise;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +39,27 @@ public class LogFilesReadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String display_color = preferences.getString("display_color", "2");
+        String display_orientation = preferences.getString("display_orientation", "1");
+
+        // display color
+        if (display_color.equals("1")){
+            setTheme(R.style.AppThemeLight);
+        } else if (display_color.equals("2")){
+            setTheme(R.style.AppThemeDark);
+        } else if (display_color.equals("3")){
+            setTheme(R.style.AppThemeDarkHighContrast);
+        }
+        // display orientation
+        if (display_orientation.equals("1")){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        } else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
+        }
+
         setContentView(R.layout.activity_log_files_read);
 
         //Find the view by its id
@@ -58,7 +82,7 @@ public class LogFilesReadActivity extends AppCompatActivity {
         String logFileNameGet = intent.getStringExtra("LOG_FILE_NAME");
 
         //Set the text
-        logFileName.setText(logFileNameGet.toString());
+        logFileName.setText("File:  " + logFileNameGet.toString());
 
         path = Environment.getExternalStorageDirectory() + File.separator + "openoise";
         File file = new File(path,logFileNameGet);

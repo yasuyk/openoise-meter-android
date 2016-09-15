@@ -1,13 +1,35 @@
 <resources>
     <string name="app_name">OpeNoise</string>
 
+    <!-- DIALOG DISCLAIMER -->
+    <string name="dialogDisclaimer_Title">OpeNoise</string>
+    <string name="Disclaimer_Text">OpeNoise is an app aimed at the measurement of real-time sound pressure level.
+        \n\nTo consider measured data reliable it is necessary to calibrate the device.
+    \n\nFor more information please refer to the \'About\' and \'Tutorial and Glossary\' sections.</string>
+    <string name="Disclaimer_Checkbox_Text">Don\'t show this message again.</string>
+
+    <!-- DIALOG DISPLAY -->
+    <string name="dialogDisplay_Title">OpeNoise</string>
+    <string name="dialogDisplay_Text">Please choose the interface style. \nYour choice can be modified in the Settings.</string>
+    <string name="checkbox_dialogDisplay1_Text">Simple</string>
+    <string name="checkbox_dialogDisplay2_Text">Advanced</string>
+    <string name="checkbox_dialogDisplay3_Text">Advanced with data saving</string>
+
     <!-- MAIN ACTIVITY STRINGS -->
+    <string name="LayoutSimpleLine1">SOUND LEVEL</string>
+    <string name="LayoutSimpleLine2">Refresh:</string>
+    <string name="LayoutSimpleLevel">0.0</string>
+
     <string name="StartingTimeRunning"></string>
     <string name="DurationTimeRunning"></string>
     <string name="ButtonRunning">RESET</string>
 
     <string name="LMax_label">LAMax</string>
     <string name="LAeqTimeDisplay_label">LAeq</string>
+    <string name="LAeqTimeDisplay_label_simple">Sound level</string>
+    <string name="LeqTimeDisplay_label">Leq</string>
+    <string name="time_display_label_simple">Refresh:</string>
+    <string name="interface_label">Stai visualizzando l\'interfaccia semplice, puoi passare a quella Avanzata nelle impostazioni</string>
     <string name="LMin_label">LAMin</string>
     <string name="LMax">0</string>
     <string name="LAeqTimeDisplay">0</string>
@@ -19,16 +41,32 @@
     <string name="level_label"></string>
     <string name="level_label_dBA">dB(A)</string>
 
+    <string name="ButtonLogTextStart">SAVE</string>
+    <string name="ButtonLogTextStop">STOP</string>
+
     <string name="StartingTimeLog"></string>
     <string name="DurationTimeLog"></string>
     <string name="StartingTimeLogText">You are not saving data</string>
-    <string name="DurationTimeLogText">Sampling:</string>
+    <string name="DurationTimeLogText">You\'ll save data every:</string>
+    <string name="SavingText">You\'re saving data</string>
+
+    <string name="plot_label_SLMHistory">Storia temporale livello Live</string>
+    <string name="plot_label_SLM">Livelli a barra</string>
+    <string name="plot_label_ThirdOctave">Terzi di Ottava</string>
+    <string name="plot_label_FFT">FFT</string>
+
+    <string name="Days">days</string>
+    <string name="Start">Start: </string>
+    <string name="Duration">Duration (t): </string>
+    <string name="DurationLogFile">Duration:</string>
 
     <!-- ACTION BAR STRINGS -->
     <string name="action_info">About</string>
-    <string name="action_log_files">Log files</string>
+    <string name="action_log_files">Saved data</string>
     <string name="action_settings">Settings</string>
+    <string name="action_glossary">Tutorial and Glossary</string>
     <string name="action_credits">Credits</string>
+    <string name="action_exit">Exit</string>
 
     <!-- SETTINGS ACTIVITY STRINGS -->
     <string name="title_activity_settings">Settings</string>
@@ -37,10 +75,20 @@
     <string name="hello_world">Hello world!</string>
 
     <!-- LOG FILES LIST ACTIVITY STRINGS -->
-    <string name="title_activity_log_files_list">Log files list</string>
+    <string name="title_activity_log_files_list">Files list</string>
+    <!-- DIALOG FILES LIST -->
+    <string name="dialog_files_list_open_file">Open with OpeNoise</string>
+    <string name="dialog_files_list_open_with">Open with another app</string>
+    <string name="dialog_files_list_share_file">Share</string>
+    <string name="dialog_files_list_delete_file">Delete</string>
+    <string name="cancel">CANCEL</string>
+    <string name="choose_open">Choose an application to open the file</string>
+    <string name="choose_share">Choose an application to send the file</string>
+    <!-- DIALOG FILE DELETE -->
+    <string name="dialog_file_delete">Are you sure you want to delete the file:</string>
 
     <!-- LOG FILES READ ACTIVITY STRINGS -->
-    <string name="title_activity_log_files_read">Log file read</string>
+    <string name="title_activity_log_files_read">File reading</string>
     <string name="ButtonLogFileTop">Top</string>
     <string name="ButtonLogFileBottom">Bottom</string>
     <string name="ButtonLogFileLeft">Left</string>
@@ -48,14 +96,27 @@
 
     <!-- INFO ACTIVITY STRINGS -->
     <string name="title_activity_info">About</string>
-    <string name="Openoise">OpeNoise</string>
-    <string name="OpenoiseText">OpeNoise provides real-time A-weighted sound pressure level measurement.\nFunctions:\n - minimum and maximum level\n - third octave and FFT analysis\n - log file storage\n - sampling time setting\n - gain setting
+    <string name="Openoise"><b>OPENOISE</b></string>
+    <string name="OpenoiseText">OpeNoise is an app aimed at the measurement of real-time sound pressure level.
 </string>
-    <string name="TermsOfUse">Term of use</string>
+    <string name="TermsOfUse"><b>TERM OF USE</b></string>
     <string name="TermsOfUseText1">This app is not intended for professional use, it does not necessarily guarantee an accurate noise measurement.
         \nSince each device has a different response to noise, a comparison with a professional noise level meter in the measurement dynamic range is required.
-        \nThe utilization of the app requires adequate technical knowledge and skill; an extemporary measurement might not be correct.
+        \nThe utilization of the app requires adequate technical knowledge and skill; an extemporary measurement might not be correct.\nFor more information, please refer to the device calibration and dynamic range specifications in the Tutorial section.
 </string>
+    <string name="InfoSpecifics"><b>TECHNICAL SPECIFICATIONS</b></string>
+    <string name="InfoSpecificsText">- Real-time A-weighted sound pressure level measurement \n- Minimum and maximum level\n- Third octave and FFT analysis\n- Data saving in text file\n- Sampling time setting\n- Calibration\n\n
+</string>
+
+    <!--<string name="SetTheGain">Calibration</string>-->
+    <!--<string name="SetTheGainText">La calibrazione è necessaria per un utilizzo corretto della app. Per calibrare il dispositivo occorre verificare il livello sonoro misurato con un valore noto e settare, nelle Impostazioni, il numero di decibel da aggiungere o sottrarre in modo che i due valori siano uguali.\nLa calibrazione viene persa dopo ogni aggiornamento della app (e reimpostato al valore iniziale 0 dB).-->
+<!--</string>-->
+    <!--<string name="InfoLog">Salvataggio dati</string>-->
+    <!--<string name="InfoLogText">L\'applicazione può salvare i dati misurati in un file di testo (non viene registrato l\'audio).-->
+<!--\nUtilizzare il pulsante \'SALVA\' per iniziare il salvataggio dei dati.-->
+<!--\nI file vengono salvati nella cartella \'openoise\' della memoria locale (non nella SD esterna), e possono essere aperti nella sezione \'Dati salvati\' o con un esplora risorse.-->
+<!--</string>-->
+
     <string name="SetTheGain">Set the Gain</string>
     <string name="SetTheGainText">Gain setting is necessary to use this app correctly. To set the Gain you have to check measured data with the actual value.\nBe careful that Gain setting is lost after each update (and reset to 0 dB).
  </string>
@@ -66,13 +127,88 @@
 \n\n
 </string>
 
+
+
     <!-- CREDITS ACTIVITY STRINGS -->
     <string name="title_activity_credits">Credits</string>
-    <string name="CreditsOpenoise">OpeNoise</string>
-    <string name="CreditsOpenoiseText">Version 1.0 - June 2016\nGNU General Public License v.2 or later</string>
-    <string name="CreditsDevelopers">Developers</string>
-    <string name="CreditsDevelopersText1">Arpa Piemonte\n(Regional Agency for the Protection of the Environment of Piedmont)\nItaly\n<a href="https://www.arpa.piemonte.it/">www.arpa.piemonte.it</a></string>
-    <string name="CreditsDevelopersText2">Istituto Superiore Mario Boella\nItaly\n<a href="https://www.ismb.it/">www.ismb.it</a></string>
-    <string name="CreditsContacts">Contacts</string>
+    <string name="CreditsOpenoise"><b>OPENOISE</b></string>
+    <string name="CreditsOpenoiseText">Version 1.1 - September 2016\nGNU General Public License v.2 or later</string>
+    <string name="CreditsDevelopers"><b>DEVELOPERS</b></string>
+    <string name="CreditsDevelopersText1">Arpa Piemonte\n(Regional Agency for the Protection of the Environment of Piedmont)\nItaly\n<a href="www.arpa.piemonte.it">www.arpa.piemonte.it</a></string>
+    <string name="CreditsDevelopersText2">Istituto Superiore Mario Boella\nItaly\n<a href="www.ismb.it">www.ismb.it</a></string>
+    <string name="CreditsContacts"><b>CONTACTS</b></string>
     <string name="CreditsContactsText">openoise@arpa.piemonte.it\n\n</string>
+
+
+    <!-- GLOSSARY ACTIVITY STRINGS -->
+    <string name="title_activity_glossary">Tutorial and Glossary</string>
+    <string name="Tutorial"><b>TUTORIAL</b></string>
+    <string name="TutorialText"><b>TAKING A MEASUREMENT</b>
+        \nNoise measurement starts antomatically opening OpeNoise. To stop the measurement push \'Exit\' in the main menù or the \'Back\' button of the device (pushing the \'Home\' button the measurement keeps running in background). Push \'RESET\' to start a new measurement and reset all levels.
+        \n
+        \n<b>CALIBRATING THE DEVICE</b>
+        \nSince each device has a different response to noise, it is necessary a calibration. \nTo calibrate the device, a comparison with a professional noise level meter in the measurement dynamic range is required. On the basis of the comparison, set the decibel value to add or subtract (with a positive or negative value, i.e. \'8.9\' or \'-8.9\') in order to obtain the same level in the Settings. \nBe careful that Calibration could be reset to 0 dB after each app update.
+        \n
+        \n<b>DYNAMIC RANGE</b>
+        \nAlthough calibrated, the devices are not able to correctly measure beyond a certain dynamic range (above a maximum value and below a minimum value). After having calibrated the system, it is necessary to check these two values, possibly through a comparison with a professional noise level meter. Beyond these threshold, measurements might not be reliable.
+        \n
+        \n<b>DATA SAVING</b>
+        \nThis option is activated selecting in the Settings menu the \'Advanced with data saving\' interface. Thus, it\'s displayed the \'SAVE\' button which can be pushed to save data in a text file (audio is not recorded). Files are saved in the directory \'openoise\' allocated in the local memory (not in external SD) and can be opened in the \'Saved data\' section or with another app.
+        \n
+        \n<b>PLOTS</b>
+        \nIn the Simple interface it is showed only a plot displaying minimum, instantaneous and maximum levels. In the Advanced interface three plots in this order are showed:
+        \n - Global levels time history
+        \n - Third octave frequency spectrum and global levels
+        \n - FFT frequency spectrum
+        \nTap the plot to show the next one.
+        \n
+    </string>
+    <string name="Glossary"><b>GLOSSARY</b></string>
+    <string name="GlossaryText"><b>dB</b>
+        \nIt is the parameter for the sound pressure level measurement.
+        \n
+        \n<b>dB(A)</b>
+        \nIt is the parameter for the sound pressure level measurement weighted in frequency according to the response of the human ear (\'A\' ponderation).
+        \n
+        \n<b>LMin</b>
+        \nMinimum level since the measurement starts, in dB.
+        \n
+        \n<b>LAMin</b>
+        \nMinimum level since the measurement starts, in dB(A).
+        \n
+        \n<b>LMax</b>
+        \nMaximum level since the measurement starts, in dB.
+        \n
+        \n<b>LAMax</b>
+        \nMaximum level since the measurement starts, in dB(A).
+        \n
+        \n<b>Leq(0.5-1-2 s)</b>
+        \nSound pressure level of the last time set (0.5, 1 o 2 seconds), in dB.
+        \n
+        \n<b>LAeq(0.5-1-2 s)</b>
+        \nSound pressure level of the last time set (0.5, 1 o 2 seconds), in dB(A).
+        \n
+        \n<b>Leq(t)</b>
+        \nSound pressure level since the measurement starts, in dB.
+        \n
+        \n<b>LAeq(t)</b>
+        \nSound pressure level since the measurement starts, in dB(A).
+        \n
+        \n<b>GLOBAL LEVEL</b>
+        \nSound pressure level calculated with all the frequency spectrum.
+        \n
+        \n<b>SPECTRUM</b>
+        \nFrequency distribution of the sound pressure level.
+        \n
+        \n<b>THIRD OCTAVE</b>
+        \nRapresentation of the frequency spectrum in a constant percentage bandwidth. The data are showed in dB.
+        \n
+        \n<b>FFT (Fast Fourier Transform)</b>
+        \nTechnique for calculating the frequency spectrum with a constant bandwidth. In OpeNoise the bandwidth is 25 Hz. The data are showed in dB and dB(A).
+        \n
+        \n
+    </string>
+
+
 </resources>
+

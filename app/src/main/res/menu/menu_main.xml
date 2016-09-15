@@ -19,8 +19,18 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_credits"
-        android:title="@string/action_credits"
+        android:id="@+id/action_glossary"
+        android:title="@string/action_glossary"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+    android:id="@+id/action_credits"
+    android:title="@string/action_credits"
+    android:orderInCategory="100"
+    app:showAsAction="never" />
+    <item
+        android:id="@+id/action_exit"
+        android:title="@string/action_exit"
         android:orderInCategory="100"
         app:showAsAction="never" />
 </menu>

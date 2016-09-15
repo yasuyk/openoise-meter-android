@@ -1,16 +1,39 @@
 <resources>
     <string name="app_name">OpeNoise</string>
 
+    <!-- DIALOG DISCLAIMER -->
+    <string name="dialogDisclaimer_Title">OpeNoise</string>
+    <string name="Disclaimer_Text">OpeNoise consente di misurare il livello di rumore in tempo reale.
+        \n\nPrima di considerare attendibili i valori rilevati è necessario procedere alla calibrazione del dispositivo.
+    \n\nPer un corretto utilizzo di OpeNoise si invita a consultare le sezioni \'Informazioni\' e \'Tutorial e Glossario\'.</string>
+    <string name="Disclaimer_Checkbox_Text">Ho capito, non mostrare più</string>
+
+    <!-- DIALOG DISPLAY -->
+    <string name="dialogDisplay_Title">OpeNoise</string>
+    <string name="dialogDisplay_Text">Scegliere la tipologia di interfaccia. \nSi può modificare la scelta successivamente nelle Impostazioni.</string>
+    <string name="checkbox_dialogDisplay1_Text">Semplice</string>
+    <string name="checkbox_dialogDisplay2_Text">Avanzata</string>
+    <string name="checkbox_dialogDisplay3_Text">Avanzata con salvataggio dati</string>
+
     <!-- MAIN ACTIVITY STRINGS -->
+    <string name="LayoutSimpleLine1">LIVELLO</string>
+    <string name="LayoutSimpleLine2">Aggiornamento ogni:</string>
+    <string name="LayoutSimpleLevel">0.0</string>
+
+
     <string name="StartingTimeRunning"></string>
     <string name="DurationTimeRunning"></string>
     <string name="ButtonRunning">RESET</string>
 
     <string name="LMax_label">LAMax</string>
     <string name="LAeqTimeDisplay_label">LAeq</string>
+    <string name="LAeqTimeDisplay_label_simple">LIVELLO</string>
+    <string name="LeqTimeDisplay_label">Leq</string>
+    <string name="time_display_label_simple">Aggiornamento ogni:</string>
+    <string name="interface_label">Stai visualizzando l\'interfaccia Semplice, puoi passare a quella Avanzata nelle impostazioni</string>
     <string name="LMin_label">LAMin</string>
     <string name="LMax">0</string>
-    <string name="LAeqTimeDisplay">0</string>
+    <string name="LAeqTimeDisplay">0.0</string>
     <string name="LMin">0</string>
     <string name="LAeqRunning_label">LAeq(t)</string>
     <string name="LAeqRunning"></string>
@@ -19,16 +42,32 @@
     <string name="level_label"></string>
     <string name="level_label_dBA">dB(A)</string>
 
+    <string name="ButtonLogTextStart">SALVA</string>
+    <string name="ButtonLogTextStop">STOP</string>
+
     <string name="StartingTimeLog"></string>
     <string name="DurationTimeLog"></string>
     <string name="StartingTimeLogText">Non stai salvando dati</string>
-    <string name="DurationTimeLogText">Campionamento:</string>
+    <string name="DurationTimeLogText">Salverai i dati ogni:</string>
+    <string name="SavingText">Stai salvando i dati</string>
+
+    <string name="plot_label_SLMHistory">Storia temporale livello Live</string>
+    <string name="plot_label_SLM">Livelli a barra</string>
+    <string name="plot_label_ThirdOctave">Terzi di Ottava</string>
+    <string name="plot_label_FFT">FFT</string>
+
+    <string name="Days">giorni</string>
+    <string name="Start">Inizio: </string>
+    <string name="Duration">Durata (t): </string>
+    <string name="DurationLogFile">Durata:</string>
 
     <!-- ACTION BAR STRINGS -->
     <string name="action_info">Informazioni</string>
-    <string name="action_log_files">Log file</string>
     <string name="action_settings">Impostazioni</string>
+    <string name="action_log_files">Dati salvati</string>
+    <string name="action_glossary">Tutorial e Glossario</string>
     <string name="action_credits">Credits</string>
+    <string name="action_exit">Esci</string>
 
     <!-- SETTINGS ACTIVITY STRINGS -->
     <string name="title_activity_settings">Impostazioni</string>
@@ -37,10 +76,20 @@
     <string name="hello_world">Hello world!</string>
 
     <!-- LOG FILES LIST ACTIVITY STRINGS -->
-    <string name="title_activity_log_files_list">Elenco dei Log file</string>
+    <string name="title_activity_log_files_list">Elenco dei file</string>
+    <!-- DIALOG FILES LIST -->
+    <string name="dialog_files_list_open_file">Apri con OpeNoise</string>
+    <string name="dialog_files_list_open_with">Apri con un\'altra app</string>
+    <string name="dialog_files_list_share_file">Condividi</string>
+    <string name="dialog_files_list_delete_file">Elimina</string>
+    <string name="cancel">ANNULLA</string>
+    <string name="choose_open">Scegli un\'app per aprire il file</string>
+    <string name="choose_share">Scegli un\'app per condividere il file</string>
+    <!-- DIALOG FILE DELETE -->
+    <string name="dialog_file_delete">Sei sicuro di voler eliminare il file:</string>
 
     <!-- LOG FILES READ ACTIVITY STRINGS -->
-    <string name="title_activity_log_files_read">Lettura del Log file</string>
+    <string name="title_activity_log_files_read">Lettura del file</string>
     <string name="ButtonLogFileTop">Inizio</string>
     <string name="ButtonLogFileBottom">Fine</string>
     <string name="ButtonLogFileLeft">Sinistra</string>
@@ -48,30 +97,102 @@
 
     <!-- INFO ACTIVITY STRINGS -->
     <string name="title_activity_info">Informazioni</string>
-    <string name="Openoise">OpeNoise</string>
-    <string name="OpenoiseText">OpeNoise consente la misurazione in tempo reale del livello equivalente di pressione sonora ponderato A.\nFunzioni:\n - livello minimo e massimo\n - analisi in terzi di ottava e FFT\n - salvataggio dati in log file\n - scelta tempo di campionamento\n - impostazione di un guadagno
+    <string name="Openoise"><b>OPENOISE</b></string>
+    <string name="OpenoiseText">OpeNoise consente di misurare il livello di rumore in tempo reale.</string>
+    <string name="TermsOfUse"><b>CONDIZIONI DI UTILIZZO</b></string>
+    <string name="TermsOfUseText1">Questa app non è progettata per usi professionali in quanto non garantisce una misurazione del rumore sufficientemente accurata.\nPrima di considerare attendibili i valori rilevati è necessario un confronto con un fonometro professionale nel range di livelli di interesse, in quanto ogni apparecchio ha una specifica risposta al rumore.\nPer utilizzare i dati acquisiti è comunque necessario avere adeguate conoscenze e competenze tecniche; una misura estemporanea e di breve durata nella maggior parte dei casi può non essere significativa.\nIn caso di dubbi, si prega di consultare, nella sezione Tutorial, le parti relative alla calibrazione del dispositivo e alla verifica della dinamica.
 </string>
-    <string name="TermsOfUse">Condizioni di utilizzo</string>
-    <string name="TermsOfUseText1">Questa app non è progettata per usi professionali in quanto non garantisce una misurazione del rumore sufficientemente accurata.\nPrima di considerare attendibili i valori rilevati è necessario un confronto con un fonometro professionale nel range di livelli di interesse, in quanto ogni apparecchio ha una specifica risposta al rumore.
-\nPer utilizzare i dati acquisiti è necessario avere adeguate conoscenze e competenze tecniche; una misura estemporanea e di breve durata nella maggior parte dei casi può non essere significativa.
+    <string name="InfoSpecifics"><b>SPECIFICHE TECNICHE</b></string>
+    <string name="InfoSpecificsText">- Misurazione in tempo reale del livello equivalente di pressione sonora ponderato A\n- Indicazione livello minimo e massimo\n- Analisi in terzi di ottava e FFT\n- Salvataggio dati in un file di testo\n- Scelta tempo di campionamento\n- Calibrazione\n\n
 </string>
-    <string name="SetTheGain">Impostare il Guadagno</string>
-    <string name="SetTheGainText">L\'impostazione del Guadagno è necessaria per un utilizzo corretto della app. Per impostare il Guadagno occorre verificare il livello sonoro misurato con un valore noto.\nL\'impostazione del Guadagno viene persa dopo ogni aggiornamento della app (e reimpostato al valore iniziale 0 dB).
+    <string name="SetTheGain">Calibrazione</string>
+    <string name="SetTheGainText">La calibrazione è necessaria per un utilizzo corretto della app. Per calibrare il dispositivo occorre verificare il livello sonoro misurato con un valore noto e settare, nelle Impostazioni, il numero di decibel da aggiungere o sottrarre in modo che i due valori siano uguali.\nLa calibrazione viene persa dopo ogni aggiornamento della app (e reimpostato al valore iniziale 0 dB).
 </string>
-    <string name="InfoLog">Log file</string>
-    <string name="InfoLogText">L\'applicazione può salvare i dati misurati in un log file.
-\nUtilizzare il pulsante \'START LOG\' per iniziare il salvataggio dei dati.
-\nI file vengono salvati nella cartella \'openoise\' della memoria locale (non nella SD esterna).
-\n\n
+    <string name="InfoLog">Salvataggio dati</string>
+    <string name="InfoLogText">L\'applicazione può salvare i dati misurati in un file di testo (non viene registrato l\'audio).
+\nUtilizzare il pulsante \'SALVA\' per iniziare il salvataggio dei dati.
+\nI file vengono salvati nella cartella \'openoise\' della memoria locale (non nella SD esterna), e possono essere aperti nella sezione \'Dati salvati\' o con un esplora risorse.
 </string>
+
 
     <!-- CREDITS ACTIVITY STRINGS -->
     <string name="title_activity_credits">Credits</string>
-    <string name="CreditsOpenoise">OpeNoise</string>
-    <string name="CreditsOpenoiseText">Versione 1.0 - Giugno 2016\nGNU General Public License v.2 o superiori</string>
-    <string name="CreditsDevelopers">Sviluppatori</string>
-    <string name="CreditsDevelopersText1">Arpa Piemonte\n(Agenzia Regionale per la Protezione Ambientale)\nItalia\n<a href="https://www.arpa.piemonte.it/">www.arpa.piemonte.it</a></string>
-    <string name="CreditsDevelopersText2">Istituto Superiore Mario Boella\nItalia\n<a href="https://www.ismb.it/">www.ismb.it</a></string>
-    <string name="CreditsContacts">Contatti</string>
+    <string name="CreditsOpenoise"><b>OPENOISE</b></string>
+    <string name="CreditsOpenoiseText">Versione 1.1 - Settembre 2016\nGNU General Public License v.2 o superiori</string>
+    <string name="CreditsDevelopers"><b>SVILUPPATORI</b></string>
+    <string name="CreditsDevelopersText1">Arpa Piemonte\n(Agenzia Regionale per la Protezione Ambientale)\nItalia\n<a href="www.arpa.piemonte.it">www.arpa.piemonte.it</a></string>
+    <string name="CreditsDevelopersText2">Istituto Superiore Mario Boella\nItalia\n<a href="www.ismb.it">www.ismb.it</a></string>
+    <string name="CreditsContacts"><b>CONTATTI</b></string>
     <string name="CreditsContactsText">openoise@arpa.piemonte.it\n\n</string>
+
+
+    <!-- GLOSSARY ACTIVITY STRINGS -->
+    <string name="title_activity_glossary">Tutorial e Glossario</string>
+    <string name="Tutorial"><b>TUTORIAL</b></string>
+    <string name="TutorialText"><b>ESEGUIRE UNA MISURA</b>
+        \nLa misura del rumore inizia automaticamente con l\'apertura di OpeNoise. La misura si interrompe selezionando \'Esci\' nel menù principale oppure digitando il pulsante \'Indietro\' del dispositivo (digitando il pulsante \'Home\' la misura continua in background). Premendo \'RESET\' si azzerano tutti i livelli e si inizia una nuova misura.
+        \n
+        \n<b>CALIBRARE IL DISPOSITIVO</b>
+        \nOgni dispositivo risponde in maniera diversa ai segnali acustici, per cui è necessario effettuare una calibrazione. \nPer calibrare il dispositivo occorre verificare il livello sonoro misurato con un valore noto, possibilmente con un fonometro professionale. A partire dal confronto si deve inserire, nelle Impostazioni, il numero di decibel da aggiungere o sottrarre (digitando un numero positivo o negativo, ad esempio \'8.9\' o \'-8.9\') in modo che i due valori siano uguali.\nLa calibrazione potrebbe  essere reimpostata al valore iniziale di 0 dB dopo l\'aggiornamento della app.
+        \n
+        \n<b>VERIFICARE LA DINAMICA</b>
+        \nSeppur calibrati, i dispositivi non sono in grado di misurare correttamente al di sopra di un valore massimo e al di sotto di un valore minimo. Verificare la dinamica significa individuare questi valori. Dopo aver effettuato la calibrazione bisogna dunque cercare il livello massimo e il livello minimo misurabili, possibilmente attraverso un confronto con un fonometro professionale. Al di fuori di tali soglie le misurazioni non sono attendibili.
+        \n
+        \n<b>SALVARE I DATI</b>
+        \nL\'opzione viene attivata selezionando in Impostazioni la configurazione di interfaccia \'Avanzata con salvataggio dati\'. Viene così visualizzato il pulsante \'SALVA\' che consente di salvare un file di testo con i dati misurati (non viene registrato l\'audio). I file vengono salvati nella cartella \'openoise\' della memoria locale (non nella SD esterna) e possono essere aperti nella sezione \'Dati salvati\' o con un\'altra app.
+        \n
+        \n<b>GRAFICI</b>
+        \nNella configurazione di interfaccia \'Semplice\' è visualizzato un solo grafico con rappresentati i livelli minimo, istantaneo e massimo. Nella configurazione di interfaccia \'Avanzata\' sono visualizzati 3 grafici nel seguente ordine:
+        \n- Andamento temporale dei livelli globali
+        \n- Spettro delle frequenze in terzi di ottava e livelli globali
+        \n- Spettro delle frequenze in banda costante calcolato con FFT
+        \nToccando sul grafico si passa al successivo.
+        \n
+    </string>
+    <string name="Glossary"><b>GLOSSARIO</b></string>
+    <string name="GlossaryText"><b>dB</b>
+        \nE\' il parametro di misura del livello sonoro.
+        \n
+        \n<b>dB(A)</b>
+        \nE\' il parametro di misura del livello sonoro ponderato in frequenza secondo la risposta dell\'orecchio umano (ponderazione A).
+        \n
+        \n<b>LMin</b>
+        \nE\' il livello sonoro minimo rilevato dall\'inizio della misura, espresso in dB.
+        \n
+        \n<b>LAMin</b>
+        \nE\' il livello sonoro minimo rilevato dall\'inizio della misura, espresso in dB(A).
+        \n
+        \n<b>LMax</b>
+        \nE\' il livello sonoro massimo rilevato dall\'inizio della misura, espresso in dB.
+        \n
+        \n<b>LAMax</b>
+        \nE\' il livello sonoro massimo rilevato dall\'inizio della misura, espresso in dB(A).
+        \n
+        \n<b>Leq(0.5-1-2 s)</b>
+        \nE\' il livello sonoro equivalente dell\'ultimo intervallo di tempo impostato (0.5, 1 o 2 secondi), espresso in dB.
+        \n
+        \n<b>LAeq(0.5-1-2 s)</b>
+        \nE\' il livello sonoro equivalente dell\'ultimo intervallo di tempo impostato (0.5, 1 o 2 secondi), espresso in dB(A).
+        \n
+        \n<b>Leq(t)</b>
+        \nE\' il livello sonoro equivalente rilevato dall\'inizio della misura, espresso in dB.
+        \n
+        \n<b>LAeq(t)</b>
+        \nE\' il livello sonoro equivalente rilevato dall\'inizio della misura, espresso in dB(A).
+        \n
+        \n<b>LIVELLO GLOBALE</b>
+        \nLivello sonoro calcolato tenendo conto di tutte le frequenze dello spettro.
+        \n
+        \n<b>SPETTRO</b>
+        \nDistribuzione in frequenza del livello sonoro.
+        \n
+        \n<b>TERZI DI OTTAVA</b>
+        \nRappresentazione dello spettro delle frequenze con una larghezza di banda percentuale costante. I dati rappresentati sono espressi in dB.
+        \n
+        \n<b>FFT</b>
+        \nLa FFT (Fast Fourier Transform - Trasformata veloce di Fourier) è una tecnica per calcolare lo spettro delle frequenze con una larghezza di banda costante. Nel caso di OpeNoise le bande sono distanziate ogni 25 Hz. I dati rappresentati sono espressi in dB e dB(A).
+        \n
+        \n
+    </string>
+
 </resources>
